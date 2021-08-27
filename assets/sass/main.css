@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'fontawesome-all.min.css';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 /*
@@ -67,7 +68,6 @@ input::-moz-focus-inner {
 input, select, textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
-  -ms-appearance: none;
   appearance: none;
 }
 
@@ -96,13 +96,8 @@ body {
   background: #ffffff;
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-  -moz-animation: none !important;
   -webkit-animation: none !important;
-  -ms-animation: none !important;
   animation: none !important;
-  -moz-transition: none !important;
-  -webkit-transition: none !important;
-  -ms-transition: none !important;
   transition: none !important;
 }
 
@@ -126,9 +121,6 @@ body, input, select, textarea {
 }
 
 a {
-  -moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-  -webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
-  -ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
   transition: border-bottom-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
   color: #585858;
@@ -1436,9 +1428,6 @@ header p {
   font-family: "Font Awesome 5 Brands";
 }
 .icon.style2 {
-  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   background-color: transparent;
   border: solid 1px #c9c9c9;
@@ -1507,7 +1496,6 @@ dl dd {
 /* Actions */
 ul.actions {
   display: -moz-flex;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   cursor: default;
@@ -1521,7 +1509,6 @@ ul.actions li {
 }
 ul.actions.special {
   -moz-justify-content: center;
-  -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
   width: 100%;
@@ -1532,8 +1519,6 @@ ul.actions.special li:first-child {
 }
 ul.actions.stacked {
   -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-left: 0;
 }
@@ -1548,11 +1533,8 @@ ul.actions.fit {
 }
 ul.actions.fit li {
   -moz-flex-grow: 1;
-  -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
-  -moz-flex-shrink: 1;
-  -webkit-flex-shrink: 1;
   -ms-flex-shrink: 1;
   flex-shrink: 1;
   width: 100%;
@@ -1566,19 +1548,14 @@ ul.actions.fit.stacked {
 @media screen and (max-width: 480px) {
   ul.actions:not(.fixed) {
     -moz-flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     margin-left: 0;
     width: 100% !important;
   }
   ul.actions:not(.fixed) li {
     -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
     -ms-flex-grow: 1;
     flex-grow: 1;
-    -moz-flex-shrink: 1;
-    -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
     padding: 1em 0 0 0;
@@ -1629,23 +1606,16 @@ form > :last-child {
 }
 form > .fields {
   display: -moz-flex;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -moz-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: calc(100% + 3em);
   margin: -1.5em 0 2em -1.5em;
 }
 form > .fields > .field {
   -moz-flex-grow: 0;
-  -webkit-flex-grow: 0;
   -ms-flex-grow: 0;
   flex-grow: 0;
-  -moz-flex-shrink: 0;
-  -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
   padding: 1.5em 0 0 1.5em;
@@ -1695,7 +1665,6 @@ select,
 textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
-  -ms-appearance: none;
   appearance: none;
   background-color: transparent;
   border: none;
@@ -1761,7 +1730,6 @@ input[type=checkbox],
 input[type=radio] {
   -moz-appearance: none;
   -webkit-appearance: none;
-  -ms-appearance: none;
   appearance: none;
   display: block;
   float: left;
@@ -1815,7 +1783,7 @@ input[type=radio]:checked + label:before {
   background: #585858;
   border-color: #585858;
   color: #ffffff;
-  content: "\f00c";
+  content: "";
 }
 input[type=checkbox]:focus + label:before,
 input[type=radio]:focus + label:before {
@@ -1960,11 +1928,7 @@ button,
 .button {
   -moz-appearance: none;
   -webkit-appearance: none;
-  -ms-appearance: none;
   appearance: none;
-  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   background-color: transparent;
   border-radius: 4px;
@@ -2068,29 +2032,19 @@ button:disabled,
 /* Tiles */
 .tiles {
   display: -moz-flex;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -moz-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
   margin: -2.5em 0 0 -2.5em;
 }
 .tiles article {
-  -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
-  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
-  -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
   transition: transform 0.5s ease, opacity 0.5s ease;
   position: relative;
   width: calc(33.3333333333% - 2.5em);
   margin: 2.5em 0 0 2.5em;
 }
 .tiles article > .image {
-  -moz-transition: -moz-transform 0.5s ease;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  -ms-transition: -ms-transform 0.5s ease;
   transition: transform 0.5s ease;
   position: relative;
   display: block;
@@ -2104,9 +2058,6 @@ button:disabled,
 }
 .tiles article > .image:before {
   pointer-events: none;
-  -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
-  -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
-  -ms-transition: background-color 0.5s ease, opacity 0.5s ease;
   transition: background-color 0.5s ease, opacity 0.5s ease;
   content: "";
   display: block;
@@ -2121,9 +2072,6 @@ button:disabled,
 }
 .tiles article > .image:after {
   pointer-events: none;
-  -moz-transition: opacity 0.5s ease;
-  -webkit-transition: opacity 0.5s ease;
-  -ms-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
   content: "";
   display: block;
@@ -2141,24 +2089,16 @@ button:disabled,
 }
 .tiles article > a {
   display: -moz-flex;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   -moz-align-items: center;
-  -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
   -moz-justify-content: center;
-  -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -moz-transition: background-color 0.5s ease, -moz-transform 0.5s ease;
-  -webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
-  -ms-transition: background-color 0.5s ease, -ms-transform 0.5s ease;
   transition: background-color 0.5s ease, transform 0.5s ease;
   position: absolute;
   top: 0;
@@ -2183,9 +2123,6 @@ button:disabled,
   margin: 0;
 }
 .tiles article > a .content {
-  -moz-transition: max-height 0.5s ease, opacity 0.5s ease;
-  -webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
-  -ms-transition: max-height 0.5s ease, opacity 0.5s ease;
   transition: max-height 0.5s ease, opacity 0.5s ease;
   width: 100%;
   max-height: 0;
@@ -2197,7 +2134,7 @@ button:disabled,
   margin-bottom: 0;
 }
 .tiles article.style1 > .image:before {
-  background-color: green;
+  background-color: #f2849e;
 }
 .tiles article.style2 > .image:before {
   background-color: #7ecaf6;
@@ -2215,9 +2152,6 @@ button:disabled,
   background-color: #8499e7;
 }
 body:not(.is-touch) .tiles article:hover > .image {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 body:not(.is-touch) .tiles article:hover > .image:before {
@@ -2235,9 +2169,6 @@ body:not(.is-touch) .tiles article:hover .content {
   margin-top: 2em;
 }
 body.is-preload .tiles article {
-  -moz-transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
   transform: scale(0.9);
   opacity: 0;
 }
@@ -2272,9 +2203,6 @@ body.is-touch .tiles article .content {
     margin: 1.25em 0 0 1.25em;
   }
   .tiles article:hover > .image {
-    -moz-transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-    -ms-transform: scale(1.0);
     transform: scale(1.0);
   }
 }
@@ -2323,11 +2251,9 @@ body.is-touch .tiles article .content {
 }
 #header nav ul {
   display: -moz-flex;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   -moz-align-items: center;
-  -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center;
   list-style: none;
@@ -2362,9 +2288,6 @@ body.is-touch .tiles article .content {
   white-space: nowrap;
 }
 #header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after {
-  -moz-transition: opacity 0.2s ease;
-  -webkit-transition: opacity 0.2s ease;
-  -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   content: "";
   display: block;
@@ -2406,21 +2329,12 @@ body.is-touch .tiles article .content {
 
 /* Menu */
 #wrapper {
-  -moz-transition: opacity 0.45s ease;
-  -webkit-transition: opacity 0.45s ease;
-  -ms-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   opacity: 1;
 }
 
 #menu {
-  -moz-transform: translateX(22em);
-  -webkit-transform: translateX(22em);
-  -ms-transform: translateX(22em);
   transform: translateX(22em);
-  -moz-transition: -moz-transform 0.45s ease, visibility 0.45s;
-  -webkit-transition: -webkit-transform 0.45s ease, visibility 0.45s;
-  -ms-transition: -ms-transform 0.45s ease, visibility 0.45s;
   transition: transform 0.45s ease, visibility 0.45s;
   position: fixed;
   top: 0;
@@ -2436,9 +2350,6 @@ body.is-touch .tiles article .content {
   z-index: 10002;
 }
 #menu > .inner {
-  -moz-transition: opacity 0.45s ease;
-  -webkit-transition: opacity 0.45s ease;
-  -ms-transition: opacity 0.45s ease;
   transition: opacity 0.45s ease;
   -webkit-overflow-scrolling: touch;
   position: absolute;
@@ -2471,13 +2382,7 @@ body.is-touch .tiles article .content {
   margin-top: -1em;
 }
 #menu > .close {
-  -moz-transition: opacity 0.45s ease, -moz-transform 0.45s ease;
-  -webkit-transition: opacity 0.45s ease, -webkit-transform 0.45s ease;
-  -ms-transition: opacity 0.45s ease, -ms-transform 0.45s ease;
   transition: opacity 0.45s ease, transform 0.45s ease;
-  -moz-transform: scale(0.25) rotate(180deg);
-  -webkit-transform: scale(0.25) rotate(180deg);
-  -ms-transform: scale(0.25) rotate(180deg);
   transform: scale(0.25) rotate(180deg);
   -webkit-tap-highlight-color: transparent;
   display: block;
@@ -2495,9 +2400,6 @@ body.is-touch .tiles article .content {
   white-space: nowrap;
 }
 #menu > .close:before, #menu > .close:after {
-  -moz-transition: opacity 0.2s ease;
-  -webkit-transition: opacity 0.2s ease;
-  -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
   content: "";
   display: block;
@@ -2526,9 +2428,6 @@ body.is-touch .tiles article .content {
 }
 @media screen and (max-width: 736px) {
   #menu {
-    -moz-transform: translateX(16.5em);
-    -webkit-transform: translateX(16.5em);
-    -ms-transform: translateX(16.5em);
     transform: translateX(16.5em);
     width: 16.5em;
   }
@@ -2552,9 +2451,6 @@ body.is-menu-visible #wrapper {
   opacity: 0.25;
 }
 body.is-menu-visible #menu {
-  -moz-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
   visibility: visible;
 }
@@ -2562,9 +2458,6 @@ body.is-menu-visible #menu > * {
   opacity: 1;
 }
 body.is-menu-visible #menu .close {
-  -moz-transform: scale(1.0) rotate(0deg);
-  -webkit-transform: scale(1.0) rotate(0deg);
-  -ms-transform: scale(1.0) rotate(0deg);
   transform: scale(1.0) rotate(0deg);
   opacity: 1;
 }
@@ -2586,16 +2479,10 @@ body.is-menu-visible #menu .close {
 }
 #footer > .inner {
   display: -moz-flex;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -moz-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -moz-flex-direction: row;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 #footer > .inner > * > :last-child {
@@ -2661,8 +2548,6 @@ body.is-menu-visible #menu .close {
   }
   #footer > .inner {
     -moz-flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   #footer > .inner section:nth-child(1) {
@@ -2672,7 +2557,6 @@ body.is-menu-visible #menu .close {
   }
   #footer > .inner section:nth-child(2) {
     -moz-order: -1;
-    -webkit-order: -1;
     -ms-order: -1;
     order: -1;
     width: 100%;
@@ -2709,6 +2593,4 @@ body.is-menu-visible #menu .close {
   #wrapper > * > .inner {
     padding: 0 1.25em;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
