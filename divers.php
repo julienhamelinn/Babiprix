@@ -3,8 +3,7 @@
 <html>
 
 <!-- Head -->
-	<?php $title="Divers";
-	 include("head.php"); ?>
+	<?php include("head.php"); ?>
 
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -20,7 +19,7 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Vie courante</h1>
+								<h1>Vie courante.</h1>
 								<p>Sélectionnez le produit en question.</p>
 							</header>
 							<section class="tiles">

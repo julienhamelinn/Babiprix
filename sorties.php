@@ -2,8 +2,7 @@
 
 <html>
 	<!-- Head -->
-	<?php $title="Sorties";
-	 include("head.php"); ?>
+	<?php include("head.php"); ?>
 
 	<body class="is-preload">
 		<!-- Wrapper -->

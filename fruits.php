@@ -3,8 +3,7 @@
 
 <html>
 	<!-- Head -->
-	<?php $title="Fruits";
-	include("head.php"); ?>
+	<?php include("head.php"); ?>
 
 	<body class="is-preload">
 		<!-- Wrapper -->

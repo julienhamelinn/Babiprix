@@ -15,8 +15,7 @@ function commune_recuperation()
 
 <!-- Head -->
 
-<?php $title="Transports";
-	include("head.php"); ?>
+<?php include("head.php"); ?>
 
 	<body class="is-preload">
 		<!-- Wrapper -->

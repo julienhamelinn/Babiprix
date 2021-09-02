@@ -3,7 +3,6 @@
 <html>
 
 <!-- Head -->
-<?php $title="Babiprix" ?>
 <?php include("head.php"); ?>
 
 
