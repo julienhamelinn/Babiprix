@@ -23,7 +23,7 @@
 								<h1>Fruits et légumes.</h1>
 								<p>Sélectionnez le produit en question.</p>
 							</header>
-							<section class="tiles">
+							<section class="tiles product_tiles">
 								<article class="style1">
 									<span class="image">
 										<img src="assets\images\pic01.jpg" alt="" />

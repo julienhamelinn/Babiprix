@@ -3,7 +3,7 @@
 		
 		<!-- Logo -->
 		<a href="index.php" class="logo">
-				<span class="symbol"><img src="assets\images\logo.svg" alt="" /></span><span class="title">Babiprix</span>
+				<span class="symbol"><img src="assets\images\logo_babiprix.svg" alt="" /></span><span class="title">Babiprix</span>
 		</a>
 
 		<!-- Nav -->
