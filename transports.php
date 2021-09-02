@@ -15,13 +15,8 @@ function commune_recuperation()
 
 <!-- Head -->
 
-<head>	
-<title> <?php $title ?></title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets\css\product.css" />
-<noscript><link rel="stylesheet" href="assets\css\noscript.css" /></noscript>
-</head>
+<?php $title="Transports";
+	include("head.php"); ?>
 
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -38,7 +33,7 @@ function commune_recuperation()
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Transport. <br>
+								<h1>Transports<br>
 									Sélectionnez le type de transport voulu.
 								</h1>
 								<p>Sélectionnez le type de transport voulu.</p>

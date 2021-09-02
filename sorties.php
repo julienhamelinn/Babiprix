@@ -2,8 +2,8 @@
 
 <html>
 	<!-- Head -->
-	<?php $title="Sorties" ?>
-	<?php include("head.php"); ?>
+	<?php $title="Sorties";
+	 include("head.php"); ?>
 
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -20,7 +20,7 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Sorties.</h1>
+								<h1>Sorties</h1>
 								<p>Etant donné de la large palette de gamme qu'offre Abidjan en terme de sorties, nous nous contenterons de donner un ordre de prix, sans faire appel à la communauté Babiprix. </p>
 							</header>
 							<section class="tiles">

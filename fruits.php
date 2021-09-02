@@ -3,8 +3,8 @@
 
 <html>
 	<!-- Head -->
-	<?php $title="Fruits" ?>
-	<?php include("head.php"); ?>
+	<?php $title="Fruits";
+	include("head.php"); ?>
 
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -20,7 +20,7 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Fruits et légumes.</h1>
+								<h1>Fruits et légumes</h1>
 								<p>Sélectionnez le produit en question.</p>
 							</header>
 							<section class="tiles product_tiles">
