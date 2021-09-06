@@ -43,68 +43,35 @@ function commune_recuperation()
 										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
 									<a>
-										<h2>Taxi </h2>
+									<h2>Taxi </h2>
+									<div class="content">
 											<div class="wrap">
   												<div class="form">
-      												<input type="text" class="searchTerm" placeholder="Entrez votre juste prix :)">
-      												<button type="submit" class="searchButton">
-       													<i class="fa fa-arrow-up"></i>
-     												</button>
+												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
   												</div>
 											</div>
+											<?php include('communication_functions.php');
+											$product='taxi';
+											$commune=$_GET['commune'];
+												if (isset($_POST['price'])){
+   													$price=htmlspecialchars($_POST['price']);
+    												$IP=getIP();
+    												send_data($product, $commune, $price);
+    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
+												}
+												?>
 										
-										<div class="content">
-											<p>Prix pour une course de 30 minutes :</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="assets\images\pic02.jpg" alt="" />
-									</span>
-									<a>
-										<h2>Gbaka</h2>
-										<div class="content">
-											<p>Prix pour une course de 30 minutes :</p>
-										</div>
-									</a>
-								</article>
-
-								<article class="style3">
-									<span class="image">
-										<img src="assets\images\pic03.jpg" alt="" />
-									</span>
-									<a>
-										<h2>Car intercité</h2>
-										<div class="content">
-											<p>Prix à l'heure de route : </p>
-										</div>
-									</a>
-								</article>
-
-								<article class="style4">
-									<span class="image">
-										<img src="assets\images\pic04.jpg" alt="" />
-									</span>
-									<a>
-										<h2>Bus</h2>
-										<div class="content">
-											<p>Prix du tiquet :</p>
+										
+											<p>Prix pour une course de 30 minutes : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
 								
-								<article class="style5">
-									<span class="image">
-										<img src="assets\images\pic04.jpg" alt="" />
-									</span>
-									<a>
-										<h2>Bateau bus</h2>
-										<div class="content">
-											<p>Prix du tiquet :</p>
-										</div>
-									</a>
-								</article>
 							</section>
 						</div>
 					</div>
