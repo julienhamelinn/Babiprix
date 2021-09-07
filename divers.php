@@ -23,56 +23,147 @@
 								<p>Sélectionnez le produit en question.</p>
 							</header>
 							<section class="tiles">
+
+
 								<article class="style1">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
-										<h2>Salle de sport</h2>
-										<div class="content">
-											<p>Prix de l'abonnement :</p>
+									<a>
+									<h2>Pinte de bière</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php 
+											$product='biere';
+											$commune=$_GET['commune'];
+												if (isset($_POST['price'])){
+   													$price=htmlspecialchars($_POST['price']);
+    												$IP=getIP();
+    												send_data($product, $commune, $price);
+    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
+												}
+												?>
+										
+										
+											<p>Prix à l'unité : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
-									
+									</a>
 								</article>
+
 								<article class="style2">
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
-										<h2>Paquet de pâtes</h2>
-										<div class="content">
-											<p>Prix au kilo : </p>
+									<a>
+									<h2>Paquet de cigarettes</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php 
+											$product='cigarette';
+											$commune=$_GET['commune'];
+												if (isset($_POST['price'])){
+   													$price=htmlspecialchars($_POST['price']);
+    												$IP=getIP();
+    												send_data($product, $commune, $price);
+    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
+												}
+												?>
+										
+										
+											<p>Prix à l'unité : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
-									
-								</article>
+									</a>
+								</article>		
+								
+								
+
 								<article class="style3">
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
-										<h2>Paquet de cigarettes</h2>
-										<div class="content">
-											<p>Prix du paquet :</p>
+									<a>
+									<h2>Paire de baskets</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php 
+											$product='basket';
+											$commune=$_GET['commune'];
+												if (isset($_POST['price'])){
+   													$price=htmlspecialchars($_POST['price']);
+    												$IP=getIP();
+    												send_data($product, $commune, $price);
+    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
+												}
+												?>
+										
+										
+											<p>Prix à l'unité : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
-									
+									</a>
 								</article>
+
+
 								<article class="style4">
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
-										<h2>Coiffeur</h2>
-										<div class="content">
-											<p>Prix de la coupe :</p>
+									<a>
+									<h2>Oeufs</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="fruits.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php 
+											$product='oeuf';
+											$commune=$_GET['commune'];
+												if (isset($_POST['price'])){
+   													$price=htmlspecialchars($_POST['price']);
+    												$IP=getIP();
+    												send_data($product, $commune, $price);
+    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
+												}
+												?>
+										
+										
+											<p>Prix à l'unité : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
-									
+									</a>
 								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-										<h2>Consultation chez le médecin</h2>
-										<div class="content">
-											<p>Prix de la consultation :</p>
-										</div>
-									
-								</article>
+								
 								
 							</section>
 						</div>

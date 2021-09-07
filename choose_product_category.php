@@ -67,18 +67,6 @@ function commune_recuperation()
 									<span class="image">
 										<img src="assets\images\pic03.jpg" alt="" />
 									</span>
-									<a href="sorties.php<?php commune_recuperation(); ?>">
-										<h2>Sorties</h2>
-										<div class="content">
-											<p>Pour faire fumer la piste de dance et pas ton porte-feuilles !</p>
-										</div>
-									</a>
-								</article>
-
-								<article class="style4">
-									<span class="image">
-										<img src="assets\images\pic04.jpg" alt="" />
-									</span>
 									<a href="divers.php<?php commune_recuperation(); ?>">
 										<h2>Vie courante</h2>
 										<div class="content">
@@ -86,7 +74,6 @@ function commune_recuperation()
 										</div>
 									</a>
 								</article>
-								
 							</section>
 						</div>
 					</div>

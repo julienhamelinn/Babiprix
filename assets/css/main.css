@@ -2203,10 +2203,10 @@ button:disabled,
   background-color: #67e25c;
 }
 .tiles article.style3 > .image:before {
-  background-color: #dbe7a2;
+  background-color: #ec0d0d;
 }
 .tiles article.style4 > .image:before {
-  background-color: #ec0d0d;
+  background-color: #dbe7a2;
 }
 .tiles article.style5 > .image:before {
   background-color: #248021;
