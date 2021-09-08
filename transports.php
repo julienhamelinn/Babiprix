@@ -61,7 +61,6 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 											<?php 
 											$product='taxi';
 											$commune=$_GET['commune'];
-											$IP=getIP();
 												if (isset($price1)){
    													$price=htmlspecialchars($price1);
     												send_data($product, $commune, $price);
@@ -98,7 +97,6 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 											<?php 
 											$product='gbaka';
 											$commune=$_GET['commune'];
-											$IP=getIP();
 												if (isset($price2)){
    													$price=htmlspecialchars($price2);
     												send_data($product, $commune, $price);
@@ -133,7 +131,6 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 											<?php 
 											$product='boat';
 											$commune=$_GET['commune'];
-											$IP=getIP();
 												if (isset($price3)){
    													$price=htmlspecialchars($price3);
     												send_data($product, $commune, $price);
