@@ -49,7 +49,7 @@ function commune_recuperation()
   												<div class="form">
 												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
       													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
-      													<button type="submit" class="searchButton">
+      													<button type="submit" class="searchButton" value="taxi">
        														<i class="fa fa-arrow-up"></i>
      													</button>
 													</form>
@@ -74,7 +74,7 @@ function commune_recuperation()
 
 
 
-								<article class="style1">
+								<article class="style2">
 									<span class="image">
 										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
@@ -108,7 +108,7 @@ function commune_recuperation()
 									</a>
 								</article>
 
-								<article class="style1">
+								<article class="style3">
 									<span class="image">
 										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
