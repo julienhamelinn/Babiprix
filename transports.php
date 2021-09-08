@@ -11,6 +11,10 @@ function commune_recuperation()
 		echo '?commune='.$_GET['commune'];
 	}
 }
+
+if(!empty($_POST['price1'])) $price1=$_POST['price1'];
+if(!empty($_POST['price2']))  $price2=$_POST['price2'];
+if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 ?>
 
 <!-- Head -->
@@ -32,8 +36,7 @@ function commune_recuperation()
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Transports<br>
-									Sélectionnez le type de transport voulu.
+								<h1>Transports
 								</h1>
 								<p>Sélectionnez le type de transport voulu.</p>
 							</header>
@@ -48,8 +51,8 @@ function commune_recuperation()
 											<div class="wrap">
   												<div class="form">
 												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
-      													<button type="submit" class="searchButton" value="taxi">
+      													<input type="text" class="searchTerm" name="price1" placeholder="Entrez votre juste prix :)">
+      													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
 													</form>
@@ -58,9 +61,9 @@ function commune_recuperation()
 											<?php 
 											$product='taxi';
 											$commune=$_GET['commune'];
-												if (isset($_POST['price'])){
-   													$price=htmlspecialchars($_POST['price']);
-    												$IP=getIP();
+											$IP=getIP();
+												if (isset($price1)){
+   													$price=htmlspecialchars($price1);
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
@@ -71,6 +74,7 @@ function commune_recuperation()
 										</div>
 									</a>
 								</article>
+
 
 
 
@@ -79,24 +83,24 @@ function commune_recuperation()
 										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
 									<a>
-									<h2>Gbaka </h2>
+									<h2>Gbaka</h2>
 									<div class="content">
 											<div class="wrap">
   												<div class="form">
 												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price2" placeholder="Entrez votre juste prix :)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
 													</form>
   												</div>
 											</div>
-											<?php include('communication_functions.php');
+											<?php 
 											$product='gbaka';
 											$commune=$_GET['commune'];
-												if (isset($_POST['price'])){
-   													$price=htmlspecialchars($_POST['price']);
-    												$IP=getIP();
+											$IP=getIP();
+												if (isset($price2)){
+   													$price=htmlspecialchars($price2);
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
@@ -107,18 +111,19 @@ function commune_recuperation()
 										</div>
 									</a>
 								</article>
-
+								
+								
 								<article class="style3">
 									<span class="image">
 										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
 									<a>
-									<h2>Bateau-bus </h2>
+									<h2>Bateau-bus</h2>
 									<div class="content">
 											<div class="wrap">
   												<div class="form">
 												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price3" placeholder="Entrez votre juste prix :)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
@@ -128,19 +133,21 @@ function commune_recuperation()
 											<?php 
 											$product='boat';
 											$commune=$_GET['commune'];
-												if (isset($_POST['price'])){
-   													$price=htmlspecialchars($_POST['price']);
-    												$IP=getIP();
+											$IP=getIP();
+												if (isset($price3)){
+   													$price=htmlspecialchars($price3);
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
 												?>
 										
 										
-											<p>Prix pour une course de 30 minutes : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											<p>Prix du tiquet : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
-								</article>
+								</article>		
+
+								
 								
 							</section>
 						</div>

@@ -20,7 +20,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Le mot du créateur</h1>
-							<!--<span class="image main"><img src="assets/images/photo_julien_hamelin.jpg" alt="" /></span>-->
+							<span class="image main"><img src="assets/images/photo_Julien_Babiprix.jpg" alt="" /></span>
 							<h2>Akwaba !</h2>
 							<p>Je m’appelle Julien et c’est moi qui ai créé le site Babiprix. Arrivé à Abidjan pour un stage de 6 mois en juillet 2021, je suis immédiatement tombé amoureux du pays et de la spontanéité, de la gentillesse et de l’humour de ses habitants. Si tu es nouveau dans la métropole, tu as du te rendre compte de toute la composante informelle de l’économie locale. La rue est clairement un des principaux lieux de commerce en Côte d’Ivoire et on peut y trouver toutes sortes de produits. De fruits à cigarettes en passant par des vêtements, il semble parfois impossible de ne pas trouver son bonheur en farfouillant dans les dédales d’Abidjan. </p>
 							<p>Mais si tu es nouveau également, tu es probablement déjà passé pour un gaou (une personne naïve et potentiellement « arnacable »). On est tous passé par là et moi le premier :-)</p>
