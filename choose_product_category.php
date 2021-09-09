@@ -37,7 +37,7 @@ function commune_recuperation()
 						<div class="inner">
 							<header>
 								<h1>Choix de la catégorie de bien ou de service</h1>
-								<p>Sélectionnez la catégorie de bien ou de service voulue.</p>
+								<p>Sélectionne la catégorie de bien ou de service voulue.</p>
 							</header>
 							<section class="tiles">
 								<article class="style1">

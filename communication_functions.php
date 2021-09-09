@@ -3,7 +3,7 @@
 
 
 ///Function that calcul the average price of a product in a certain commune, based on the data contained in babiprix.sql
-function average_price($product, $commune){
+function average_price($product, $commune,$type){
 	//opening of the database
 	try {
 		$price_database = new PDO('mysql:host=localhost;dbname=babiprix;charset=utf8', 'root', 'root'); ///A changer lors de l'hébergement
@@ -25,8 +25,15 @@ function average_price($product, $commune){
 		$i=$i+1;
 	}
 	$response->closeCursor();
-	$average=$average/$i;
-	return $average;
+	if($i!=0){
+		$average=$average/$i;
+		echo '<p><strong>Prix';
+		echo $type;
+		echo $average;
+		echo 'FCFA</strong></p>';
+	}else{
+		echo '<p><strong>Sois le premier à entrer le juste prix pour ce produit dans cette commune !</strong></p>';
+	}
 }
 
 //function that get the IP adress of the user

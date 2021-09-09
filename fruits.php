@@ -47,7 +47,7 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
 						<div class="inner">
 							<header>
 								<h1>Fruits et légumes</h1>
-								<p>Sélectionnez le type de produit voulu.</p>
+								<p>Sélectionne le type de produit voulu.</p>
 							</header>
 							<section class="tiles">
 								<article class="style1">
@@ -75,10 +75,11 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
 												?>
 										
 										
-											<p>Prix à l'unité: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -111,10 +112,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
-												?>
-										
-										
-											<p>Prix à l'unité : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
+												?>		
 										</div>
 									</a>
 								</article>
@@ -145,10 +145,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
-												?>
-										
-										
-											<p>Prix à l'unité : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
+												?>										
 										</div>
 									</a>
 								</article>		
@@ -179,10 +178,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
-												?>
-										
-										
-											<p>Prix au kilo: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											$type=' au kilo : ';
+											average_price($product, $commune,$type);
+												?>								
 										</div>
 									</a>
 								</article>
@@ -212,10 +210,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
-												?>
-										
-										
-											<p>Prix au kilo: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+												$type=' au kilo : ';
+											average_price($product, $commune,$type);
+												?>		
 										</div>
 									</a>
 								</article>
@@ -246,10 +243,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' au kilo : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix au kilo: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -279,11 +275,10 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' au kilo : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix au kilo: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
-										</div>
+											</div>
 									</a>
 								</article>
 
@@ -313,10 +308,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix à l'unité: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -347,10 +341,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' au kilo : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix au kilo: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -382,10 +375,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
-												?>
-										
-										
-											<p>Prix au kilo: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											$type=' au kilo : ';
+											average_price($product, $commune,$type);
+											?>
 										</div>
 									</a>
 								</article>
@@ -416,10 +408,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix à l'unité: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -443,17 +434,16 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
   												</div>
 											</div>
 											<?php 
-											$product='tomate';
+											$product='aubergine';
 											$commune=$_GET['commune'];
 												if (isset($price12)){
    													$price=htmlspecialchars($price12);
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix à l'unité: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -484,10 +474,9 @@ if(!empty($_POST['price13']))  $price4=$_POST['price13'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' au kilo : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix au kilo: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>

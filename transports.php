@@ -38,7 +38,7 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 							<header>
 								<h1>Transports
 								</h1>
-								<p>Sélectionnez le type de transport voulu.</p>
+								<p>Sélectionne le type de transport voulu.</p>
 							</header>
 							<section class="tiles">
 								<article class="style1">
@@ -66,10 +66,12 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' pour une course de 30 minutes : ';
+											average_price($product, $commune,$type);
 												?>
 										
 										
-											<p>Prix pour une course de 30 minutes : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											
 										</div>
 									</a>
 								</article>
@@ -102,10 +104,12 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' pour une course de 30 minutes : ';
+											average_price($product, $commune,$type);
 												?>
 										
-										
-											<p>Prix pour une course de 30 minutes : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											
+											
 										</div>
 									</a>
 								</article>
@@ -136,10 +140,12 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' pour une course de 30 minutes : ';
+											average_price($product, $commune,$type);
 												?>
 										
 										
-											<p>Prix du tiquet : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
+											
 										</div>
 									</a>
 								</article>		

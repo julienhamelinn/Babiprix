@@ -38,7 +38,7 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 						<div class="inner">
 							<header>
 								<h1>Vie courante</h1>
-								<p>Sélectionnez le type de produit voulu.</p>
+								<p>Sélectionne le type de produit voulu.</p>
 							</header>
 							<section class="tiles">
 								<article class="style1">
@@ -66,10 +66,11 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
-												?>
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
+											?>
 										
 										
-											<p>Prix : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -102,10 +103,11 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
 												?>
 										
 										
-											<p>Prix : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
@@ -136,10 +138,9 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' à la paire : ';
+											average_price($product, $commune,$type);
 												?>
-										
-										
-											<p>Prix : <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>		
@@ -170,10 +171,11 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
     												send_data($product, $commune, $price);
     											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
 												}
+											$type=' à l\'unité : ';
+											average_price($product, $commune,$type);
 												?>
 										
 										
-											<p>Prix à l'unité: <strong><?php echo round(average_price($product, $commune),-1)?> FCFA</strong></p>
 										</div>
 									</a>
 								</article>
