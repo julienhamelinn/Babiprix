@@ -2,6 +2,8 @@
 //////File that contains the communication function to make the link between php and sql
 
 
+
+
 ///Function that calcul the average price of a product in a certain commune, based on the data contained in babiprix.sql
 function average_price($product, $commune,$type){
 	//opening of the database
