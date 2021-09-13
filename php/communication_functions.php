@@ -8,7 +8,7 @@ $db_password = $_ENV["mysql_password"];
 function average_price($product, $commune,$type){
 	//opening of the database
 	try {
-		$price_database = new PDO('mysql:host=localhost;dbname=babiprix;charset=utf8', 'root', $db_password); ///A changer lors de l'hébergement
+		$price_database = new PDO('mysql:host=db;dbname=babiprix;charset=utf8', 'root', $db_password); ///A changer lors de l'hébergement
 		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
@@ -52,7 +52,7 @@ function getIp(){
 
 //function that detrmines if the user already sent data or not. Only one answer per user and per couple (product,commune)
 function new_contributor($IP, $product, $commune){
-	try{$price_database = new PDO('mysql:host=localhost;dbname=babiprix;charset=utf8', 'root', $db_password); 
+	try{$price_database = new PDO('mysql:host=db;dbname=babiprix;charset=utf8', 'root', $db_password); 
 		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
@@ -71,7 +71,7 @@ function send_data($product, $commune,$price){
 
 	//opening of the database
 	try {
-		$price_database = new PDO('mysql:host=localhost;dbname=babiprix;charset=utf8', 'root', $db_password); ///A changer lors de l'hébergement
+		$price_database = new PDO('mysql:host=db;dbname=babiprix;charset=utf8', 'root', $db_password); ///A changer lors de l'hébergement
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
 	}
