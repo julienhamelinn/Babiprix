@@ -70,7 +70,7 @@ function commune_recuperation()
 									<a href="divers.php<?php commune_recuperation(); ?>">
 										<h2>Vie courante</h2>
 										<div class="content">
-											<p>Pour ne pas se ruiner sur les choses qui ne comptent pas !</p>
+										<p>Pour vivre et kiffer sans se ruiner !</p>
 										</div>
 									</a>
 								</article>
