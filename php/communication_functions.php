@@ -68,7 +68,6 @@ function new_contributor($IP, $product, $commune){
 		die('Erreur : '.$e->getMessage());
 	}
 	//$response = $price_database->prepare('SELECT COUNT(*) FROM prices WHERE IP = ? AND commune = ? AND product = ?');
-	echo abc;
 	$response = $price_database->prepare('SELECT EXISTS (SELECT * FROM prices WHERE IP = ? AND commune = ? AND product = ?) AS new_entry');
 	$response->execute(array($IP, $commune, $product));
 	$req = $response->fetch(PDO::FETCH_ASSOC);
