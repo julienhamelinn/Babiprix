@@ -2,18 +2,21 @@
 //////File that contains the communication function to make the link between php and sql
 
 
-$db_password = $_ENV["mysql_password"];
-
 ///Function that calcul the average price of a product in a certain commune, based on the data contained in babiprix.sql
 function average_price($product, $commune,$type){
+	//defining variable
+	$mysql_password = $_ENV["MYSQL_PASSWORD"];
+	$mysql_user = $_ENV["MYSQL_USER"];
+	$mysql_database = $_ENV["MYSQL_DATABASE"];
+	$port = 3306;
 	//opening of the database
 	try {
-		$price_database = new PDO('mysql:host=db;dbname=babiprix;charset=utf8', 'root', $db_password); ///A changer lors de l'hébergement
+		$price_database = new PDO('mysql:host=db;port=$port;charset=utf8;dbname='.$mysql_database, $mysql_user, $mysql_password); ///A changer lors de l'hébergement
 		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
 	}
-
+	
 	//Recuperation of the price data attributed to the right product in the right commune and stocking in $response
 	$response = $price_database->prepare('SELECT price FROM prices WHERE commune = ? AND product = ?');
 	$response->execute(array($commune, $product));
@@ -52,7 +55,12 @@ function getIp(){
 
 //function that detrmines if the user already sent data or not. Only one answer per user and per couple (product,commune)
 function new_contributor($IP, $product, $commune){
-	try{$price_database = new PDO('mysql:host=db;dbname=babiprix;charset=utf8', 'root', $db_password); 
+	//defining variable
+	$mysql_password = $_ENV["MYSQL_PASSWORD"];
+	$mysql_user = $_ENV["MYSQL_USER"];
+	$mysql_database = $_ENV["MYSQL_DATABASE"];
+	$port = 3306;
+	try{$price_database = PDO('mysql:host=db;port=$port;charset=utf8;dbname='.$mysql_database, $mysql_user, $mysql_password); 
 		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
@@ -68,14 +76,17 @@ function new_contributor($IP, $product, $commune){
 function send_data($product, $commune,$price){
 	//Recuperation of the IP adress
 	$IP=getIP();
-
+	//defining variable
+	$mysql_password = $_ENV["MYSQL_PASSWORD"];
+	$mysql_user = $_ENV["MYSQL_USER"];
+	$mysql_database = $_ENV["MYSQL_DATABASE"];
+	$port = 3306;
 	//opening of the database
 	try {
-		$price_database = new PDO('mysql:host=db;dbname=babiprix;charset=utf8', 'root', $db_password); ///A changer lors de l'hébergement
+		$price_database = new PDO('mysql:host=db;port=$port;charset=utf8;dbname='.$mysql_database, $mysql_user, $mysql_password); ///A changer lors de l'hébergement
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
 	}
-
 	//if the user is a new_comer, one just insert another line of price
 	if (new_contributor($IP, $product, $commune)==0){
 		//Filling the right case corresponding with the commune in which the price is stated with the use of 
