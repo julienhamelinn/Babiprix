@@ -60,12 +60,15 @@ function new_contributor($IP, $product, $commune){
 	$mysql_user = $_ENV["MYSQL_USER"];
 	$mysql_database = $_ENV["MYSQL_DATABASE"];
 	$port = 3306;
-	try{$price_database = PDO('mysql:host=db;port=$port;charset=utf8;dbname='.$mysql_database, $mysql_user, $mysql_password); 
+	//j'arrive là ensuite
+	try {
+		$price_database = new PDO('mysql:host=db;port=$port;charset=utf8;dbname='.$mysql_database, $mysql_user, $mysql_password); ///A changer lors de l'hébergement
 		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
 	}
 	//$response = $price_database->prepare('SELECT COUNT(*) FROM prices WHERE IP = ? AND commune = ? AND product = ?');
+	echo abc;
 	$response = $price_database->prepare('SELECT EXISTS (SELECT * FROM prices WHERE IP = ? AND commune = ? AND product = ?) AS new_entry');
 	$response->execute(array($IP, $commune, $product));
 	$req = $response->fetch(PDO::FETCH_ASSOC);
@@ -84,10 +87,12 @@ function send_data($product, $commune,$price){
 	//opening of the database
 	try {
 		$price_database = new PDO('mysql:host=db;port=$port;charset=utf8;dbname='.$mysql_database, $mysql_user, $mysql_password); ///A changer lors de l'hébergement
+		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
 	}
 	//if the user is a new_comer, one just insert another line of price
+	//j'arrive ici puis dans new_contributor
 	if (new_contributor($IP, $product, $commune)==0){
 		//Filling the right case corresponding with the commune in which the price is stated with the use of 
 	$query = $price_database->prepare('INSERT INTO prices(IP, commune, product, price) VALUES(:IP, :commune, :product, :price)');
@@ -98,7 +103,6 @@ function send_data($product, $commune,$price){
 			'price' => $price
 		));
 	} 
-
 	else {
 		//Update the price value (a user can only upload one price per couple (commune,price))
 		$query = $price_database->prepare("UPDATE prices SET price = :price WHERE IP = :IP AND product=:product AND commune=:commune");
