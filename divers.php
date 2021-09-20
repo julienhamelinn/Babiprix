@@ -16,6 +16,8 @@ if(!empty($_POST['price1'])) $price1=$_POST['price1'];
 if(!empty($_POST['price2']))  $price2=$_POST['price2'];
 if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 if(!empty($_POST['price4']))  $price4=$_POST['price4'];
+if(!empty($_POST['price5']))  $price5=$_POST['price5'];
+if(!empty($_POST['price6']))  $price6=$_POST['price6'];
 ?>
 
 <!-- Head -->
@@ -51,7 +53,7 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 											<div class="wrap">
   												<div class="form">
 												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price1" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price1" placeholder="Entre le juste prix :-)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
@@ -61,13 +63,16 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 											<?php 
 											$product='biere';
 											$commune=$_GET['commune'];
+											$margin=0.5;											
 												if (isset($price1)){
    													$price=htmlspecialchars($price1);
-    												send_data($product, $commune, $price);
-    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
+    												send_data($product, $commune, $price, $margin);
 												}
 											$type=' à l\'unité : ';
-											average_price($product, $commune,$type);
+											echo '<p><strong>Prix';
+											echo $type;
+											echo average_price($product, $commune);
+											echo ' FCFA</strong></p>';
 											?>
 										
 										
@@ -88,7 +93,7 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 											<div class="wrap">
   												<div class="form">
 												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price2" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price2" placeholder="Entre le juste prix :-)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
@@ -98,14 +103,17 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 											<?php 
 											$product='cigarette';
 											$commune=$_GET['commune'];
-												if (isset($price2)){
-   													$price=htmlspecialchars($price2);
-    												send_data($product, $commune, $price);
-    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
-												}
-											$type=' à l\'unité : ';
-											average_price($product, $commune,$type);
-												?>
+											$margin=0.5;											
+											if (isset($price2)){
+												   $price=htmlspecialchars($price2);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' à l\'unité : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
 										
 										
 										</div>
@@ -123,7 +131,7 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 											<div class="wrap">
   												<div class="form">
 												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price3" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price3" placeholder="Entre le juste prix :-)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
@@ -133,15 +141,18 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 											<?php 
 											$product='basket';
 											$commune=$_GET['commune'];
-												if (isset($price3)){
-   													$price=htmlspecialchars($price3);
-    												send_data($product, $commune, $price);
-    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
-												}
-											$type=' à la paire : ';
-											average_price($product, $commune,$type);
-												?>
-										</div>
+											$margin=0.5;											
+											if (isset($price3)){
+												   $price=htmlspecialchars($price3);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' à la paire : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
+									</div>
 									</a>
 								</article>		
 
@@ -156,7 +167,7 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
 											<div class="wrap">
   												<div class="form">
 												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price4" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price4" placeholder="Entre le juste prix :-)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
@@ -164,16 +175,93 @@ if(!empty($_POST['price4']))  $price4=$_POST['price4'];
   												</div>
 											</div>
 											<?php 
-											$product='basket';
+											$product='oeuf';
 											$commune=$_GET['commune'];
-												if (isset($price4)){
-   													$price=htmlspecialchars($price4);
-    												send_data($product, $commune, $price);
-    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
-												}
-											$type=' à l\'unité : ';
-											average_price($product, $commune,$type);
-												?>
+											$margin=0.5;											
+											if (isset($price4)){
+												   $price=htmlspecialchars($price4);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' à l\'unité : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
+										
+										
+										</div>
+									</a>
+								</article>
+
+								<article class="style5">
+									<span class="image">
+										<img src="assets\images\pic01.jpg" alt="" />
+									</span>
+									<a>
+									<h2>Bouteille d'eau</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price5" placeholder="Entre le juste prix :-)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php 
+											$product='eau';
+											$commune=$_GET['commune'];
+											$margin=0.5;											
+											if (isset($price5)){
+												   $price=htmlspecialchars($price5);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' à l\'unité : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
+										
+										
+										</div>
+									</a>
+								</article>
+
+								<article class="style6">
+									<span class="image">
+										<img src="assets\images\pic01.jpg" alt="" />
+									</span>
+									<a>
+									<h2>Bouteille de soda</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="divers.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price6" placeholder="Entre le juste prix :-)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php 
+											$product='soda';
+											$commune=$_GET['commune'];
+											$margin=0.5;											
+											if (isset($price6)){
+												   $price=htmlspecialchars($price6);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' à l\'unité : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
 										
 										
 										</div>
