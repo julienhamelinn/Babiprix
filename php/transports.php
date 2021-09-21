@@ -15,6 +15,8 @@ function commune_recuperation()
 if(!empty($_POST['price1'])) $price1=$_POST['price1'];
 if(!empty($_POST['price2']))  $price2=$_POST['price2'];
 if(!empty($_POST['price3']))  $price3=$_POST['price3'];
+if(!empty($_POST['price4']))  $price4=$_POST['price4'];
+if(!empty($_POST['price5']))  $price5=$_POST['price5'];
 ?>
 
 <!-- Head -->
@@ -51,32 +53,33 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 											<div class="wrap">
   												<div class="form">
 												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price1" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price1" placeholder="Entre le juste prix :-)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
 													</form>
   												</div>
 											</div>
-											<?php 
+											<?php
 											$product='taxi';
 											$commune=$_GET['commune'];
-												if (isset($price1)){
-   													$price=htmlspecialchars($price1);
-    												send_data($product, $commune, $price);
-    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
-												}
-											$type=' pour une course de 30 minutes : ';
-											average_price($product, $commune,$type);
-												?>
+											$margin=1;											
+											if (isset($price1)){
+												   $price=htmlspecialchars($price1);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' pour une course de 10 minutes : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
 										
 										
 											
 										</div>
 									</a>
 								</article>
-
-
 
 
 								<article class="style2">
@@ -89,60 +92,65 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 											<div class="wrap">
   												<div class="form">
 												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price2" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price2" placeholder="Entre le juste prix :-)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
 													</form>
   												</div>
 											</div>
-											<?php 
+											<?php
 											$product='gbaka';
 											$commune=$_GET['commune'];
-												if (isset($price2)){
-   													$price=htmlspecialchars($price2);
-    												send_data($product, $commune, $price);
-    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
-												}
-											$type=' pour une course de 30 minutes : ';
-											average_price($product, $commune,$type);
-												?>
+											$margin=1;											
+											if (isset($price2)){
+												   $price=htmlspecialchars($price2);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' pour une course de 10 minutes : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
 										
-											
+										
 											
 										</div>
 									</a>
 								</article>
-								
-								
+
 								<article class="style3">
 									<span class="image">
 										<img src="assets\images\pic01.jpg" alt="" />
 									</span>
 									<a>
-									<h2>Bateau-bus</h2>
+									<h2>Bateau bus</h2>
 									<div class="content">
 											<div class="wrap">
   												<div class="form">
 												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
-      													<input type="text" class="searchTerm" name="price3" placeholder="Entrez votre juste prix :)">
+      													<input type="text" class="searchTerm" name="price3" placeholder="Entre le juste prix :-)">
       													<button type="submit" class="searchButton">
        														<i class="fa fa-arrow-up"></i>
      													</button>
 													</form>
   												</div>
 											</div>
-											<?php 
+											<?php
 											$product='boat';
 											$commune=$_GET['commune'];
-												if (isset($price3)){
-   													$price=htmlspecialchars($price3);
-    												send_data($product, $commune, $price);
-    											echo 'Merci d\'avoir contribué à babiprix ! <br/>';
-												}
-											$type=' pour une course de 30 minutes : ';
-											average_price($product, $commune,$type);
-												?>
+											$margin=0.5;											
+											if (isset($price3)){
+												   $price=htmlspecialchars($price3);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' du ticket : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
 										
 										
 											
@@ -150,8 +158,81 @@ if(!empty($_POST['price3']))  $price3=$_POST['price3'];
 									</a>
 								</article>		
 
+								<article class="style4">
+									<span class="image">
+										<img src="assets\images\pic01.jpg" alt="" />
+									</span>
+									<a>
+									<h2>Bus</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price4" placeholder="Entre le juste prix :-)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php
+											$product='bus';
+											$commune=$_GET['commune'];
+											$margin=0.5;											
+											if (isset($price4)){
+												   $price=htmlspecialchars($price4);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' du ticket : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
+										
+										
+											
+										</div>
+									</a>
+								</article>
 								
-								
+								<article class="style5">
+									<span class="image">
+										<img src="assets\images\pic01.jpg" alt="" />
+									</span>
+									<a>
+									<h2>Location de voiture (avec chauffeur)</h2>
+									<div class="content">
+											<div class="wrap">
+  												<div class="form">
+												  <form action="transports.php<?php commune_recuperation(); ?>" method="post">
+      													<input type="text" class="searchTerm" name="price5" placeholder="Entre le juste prix :-)">
+      													<button type="submit" class="searchButton">
+       														<i class="fa fa-arrow-up"></i>
+     													</button>
+													</form>
+  												</div>
+											</div>
+											<?php
+											$product='car';
+											$commune=$_GET['commune'];
+											$margin=0.2;											
+											if (isset($price5)){
+												   $price=htmlspecialchars($price5);
+												send_data($product, $commune, $price, $margin);
+											}
+										$type=' à la journée : ';
+										echo '<p><strong>Prix';
+										echo $type;
+										echo average_price($product, $commune);
+										echo ' FCFA</strong></p>';
+										?>
+										
+										
+											
+										</div>
+									</a>
+								</article>
 							</section>
 						</div>
 					</div>
