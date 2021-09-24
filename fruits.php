@@ -187,7 +187,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 												   $price=htmlspecialchars($price4);
 												send_data($product, $commune, $price, $margin);
 											}
-										$type=' au kilo : ';
+										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
 										echo average_price($product, $commune);
@@ -222,7 +222,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 												   $price=htmlspecialchars($price5);
 												send_data($product, $commune, $price, $margin);
 											}
-										$type=' au kilo : ';
+										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
 										echo average_price($product, $commune);
@@ -258,7 +258,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 												   $price=htmlspecialchars($price6);
 												send_data($product, $commune, $price, $margin);
 											}
-										$type=' au kilo : ';
+										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
 										echo average_price($product, $commune);
@@ -293,7 +293,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 												   $price=htmlspecialchars($price7);
 												send_data($product, $commune, $price, $margin);
 											}
-										$type=' au kilo : ';
+										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
 										echo average_price($product, $commune);
@@ -365,7 +365,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 												   $price=htmlspecialchars($price9);
 												send_data($product, $commune, $price, $margin);
 											}
-										$type=' au kilo : ';
+										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
 										echo average_price($product, $commune);
@@ -402,7 +402,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 												   $price=htmlspecialchars($price10);
 												send_data($product, $commune, $price, $margin);
 											}
-										$type=' au kilo : ';
+										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
 										echo average_price($product, $commune);
@@ -510,7 +510,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 												   $price=htmlspecialchars($price13);
 												send_data($product, $commune, $price, $margin);
 											}
-										$type=' au kilo : ';
+										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
 										echo average_price($product, $commune);

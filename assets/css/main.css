@@ -2710,4 +2710,40 @@ body.is-menu-visible #menu .close {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+
+/* Map sizing */
+.map{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} 
+
+@media(min-width: 480px){
+  .map{
+  transform: scale(0.32) translate(0px,-900px);
+  }  
+}
+
+@media(min-width: 736px){
+  .map{
+  transform: scale(0.40) translate(0px,-650px);
+  }  
+}
+
+@media(min-width: 980px){
+  .map{
+  transform: scale(0.50) translate(0px,-400px);
+  }  
+}
+
+@media(min-width: 1280px){
+  .map{
+  transform: scale(0.70) translate(0px,-150px);
+  }  
+}
+
+@media(min-width: 1900px){
+  .map{
+  transform: scale(0.90) translate(0px,-50px);
+  }  
+}
