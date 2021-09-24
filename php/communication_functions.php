@@ -61,6 +61,21 @@ function data_absurdity_test($commune, $product, $price, $margin, $average){
     }
 }
 
+//function that detrmines if the user already sent data or not. Only one answer per user and per couple (product,commune)
+function new_contributor($IP, $product, $commune){
+	try{$price_database = new PDO('mysql:host=localhost;dbname=babiprix;charset=utf8', 'root', 'root'); 
+		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	} catch (Exception $e) {
+		die('Erreur : '.$e->getMessage());
+	}
+	//$response = $price_database->prepare('SELECT COUNT(*) FROM prices WHERE IP = ? AND commune = ? AND product = ?');
+	$response = $price_database->prepare('SELECT EXISTS (SELECT * FROM prices WHERE IP = ? AND commune = ? AND product = ?) AS new_entry');
+	$response->execute(array($IP, $commune, $product));
+	$req = $response->fetch(PDO::FETCH_ASSOC);
+	return $req['new_entry'];
+}
+
+
 //function that send data to the database
 function send_data($product, $commune,$price, $margin){
     $average=average_price($product,$commune);
@@ -81,7 +96,7 @@ function send_data($product, $commune,$price, $margin){
 	    }
 
 	    //if the user is a new_comer, one just insert another line of price
-	    if ($average==0){
+	    if (new_contributor($IP,$product,$commune)==0){
 	    	//Filling the right case corresponding with the commune in which the price is stated with the use of 
 	    $query = $price_database->prepare('INSERT INTO prices(IP, commune, product, price) VALUES(:IP, :commune, :product, :price)');
 	    $query->execute(array(
