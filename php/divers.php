@@ -71,7 +71,7 @@ if(!empty($_POST['price6']))  $price6=$_POST['price6'];
 											$type=' à l\'unité : ';
 											echo '<p><strong>Prix';
 											echo $type;
-											echo average_price($product, $commune);
+											echo round(average_price($product, $commune),-1);
 											echo ' FCFA</strong></p>';
 											?>
 										
@@ -111,7 +111,7 @@ if(!empty($_POST['price6']))  $price6=$_POST['price6'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -149,7 +149,7 @@ if(!empty($_POST['price6']))  $price6=$_POST['price6'];
 										$type=' à la paire : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 									</div>
@@ -185,7 +185,7 @@ if(!empty($_POST['price6']))  $price6=$_POST['price6'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -222,7 +222,7 @@ if(!empty($_POST['price6']))  $price6=$_POST['price6'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -259,7 +259,7 @@ if(!empty($_POST['price6']))  $price6=$_POST['price6'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										

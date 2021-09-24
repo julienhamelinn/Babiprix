@@ -2718,6 +2718,13 @@ body.is-menu-visible #menu .close {
   justify-content: center;
 } 
 
+
+@media(min-width: 50px){
+  .map{
+  transform: scale(0.22) translate(0px,-1500px);
+  }  
+}
+
 @media(min-width: 480px){
   .map{
   transform: scale(0.32) translate(0px,-900px);
