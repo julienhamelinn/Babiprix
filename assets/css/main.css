@@ -2721,7 +2721,7 @@ body.is-menu-visible #menu .close {
 
 @media(min-width: 50px){
   .map{
-  transform: scale(0.22) translate(0px,-1000px);
+  transform: scale(0.22) translate(0px,-1500px);
   }  
 }
 
