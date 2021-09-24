@@ -1,13 +1,12 @@
 #canvasMap{
-     
-      position: absolute;
+      	position: absolute;
         width : 1000px;
         height : 788px;
 		z-index: 50;
 }
 
 #legende {
-	font-size: 12px;
+	font-size: 30px;
 	color: #990000;
 	font-weight: bold;
 	z-index: 100;
