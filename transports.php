@@ -71,7 +71,7 @@ if(!empty($_POST['price5']))  $price5=$_POST['price5'];
 										$type=' pour une course de 10 minutes : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -110,7 +110,7 @@ if(!empty($_POST['price5']))  $price5=$_POST['price5'];
 										$type=' pour une course de 10 minutes : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -148,7 +148,7 @@ if(!empty($_POST['price5']))  $price5=$_POST['price5'];
 										$type=' du ticket : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -186,7 +186,7 @@ if(!empty($_POST['price5']))  $price5=$_POST['price5'];
 										$type=' du ticket : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -224,7 +224,7 @@ if(!empty($_POST['price5']))  $price5=$_POST['price5'];
 										$type=' à la journée : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										

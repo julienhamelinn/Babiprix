@@ -78,7 +78,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										
@@ -118,7 +118,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
@@ -154,7 +154,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>										
 										</div>
@@ -190,7 +190,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>						
 										</div>
@@ -225,7 +225,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>		
 										</div>
@@ -261,7 +261,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
@@ -296,7 +296,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 											</div>
@@ -332,7 +332,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
@@ -368,7 +368,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
@@ -405,7 +405,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
@@ -441,7 +441,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
@@ -477,7 +477,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
@@ -513,7 +513,7 @@ if(!empty($_POST['price13']))  $price13=$_POST['price13'];
 										$type=' à l\'unité : ';
 										echo '<p><strong>Prix';
 										echo $type;
-										echo average_price($product, $commune);
+										echo round(average_price($product, $commune),-1);
 										echo ' FCFA</strong></p>';
 										?>
 										</div>
