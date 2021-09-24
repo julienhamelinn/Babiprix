@@ -63,11 +63,19 @@ function data_absurdity_test($commune, $product, $price, $margin, $average){
 
 //function that detrmines if the user already sent data or not. Only one answer per user and per couple (product,commune)
 function new_contributor($IP, $product, $commune){
-	try{$price_database = new PDO('mysql:host=localhost;dbname=babiprix;charset=utf8', 'root', 'root'); 
+	//defining variable
+	$mysql_password = $_ENV["MYSQL_PASSWORD"];
+	$mysql_user = $_ENV["MYSQL_USER"];
+	$mysql_database = $_ENV["MYSQL_DATABASE"];
+	$port = 3306;
+	//opening of the database
+	try {
+		$price_database = new PDO('mysql:host=db;port=$port;charset=utf8;dbname='.$mysql_database, $mysql_user, $mysql_password); ///A changer lors de l'hébergement
 		$price_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	} catch (Exception $e) {
 		die('Erreur : '.$e->getMessage());
 	}
+	
 	//$response = $price_database->prepare('SELECT COUNT(*) FROM prices WHERE IP = ? AND commune = ? AND product = ?');
 	$response = $price_database->prepare('SELECT EXISTS (SELECT * FROM prices WHERE IP = ? AND commune = ? AND product = ?) AS new_entry');
 	$response->execute(array($IP, $commune, $product));
